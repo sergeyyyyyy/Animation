@@ -1,0 +1,310 @@
+html {
+    box-sizing: border-box;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.conteiner {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    width: 100rem;
+    height: 80rem;
+    background-image: url(/image/600\ la-vida-natural_5eb41ed37ea0c_img.jpg);
+    background-size: cover; /* Масштабирует изображение, чтобы оно покрывало фон полностью */
+    background-position: center; /* Позиционирует изображение по центру */
+    position: relative;
+}
+
+.wrapper div {
+    position: absolute;
+}
+
+.stick {
+    background-color: rgb(233, 154, 49);
+    border-radius: 25px 25px 0 0;
+    width: 10px;
+    height: 100px;
+    transform-origin: bottom center;
+}
+
+.rubber {
+    right: 305px; /*310*/
+    width: 115px;/*105*/
+    height: 50px;
+    top: 600px;
+    /* border-radius: 0 0 50px 50px; */
+    /* background-color: brown; */
+    border-bottom: 4px solid coral;
+    box-shadow: 2px #ddd;
+    animation: rubberAnim 2s infinite linear;
+}
+
+/* @keyframes rubberAnim {
+    0%,
+    20% {
+        border-radius: 0;
+        transform: translateY(0);
+    }
+
+    50%,
+    60% {
+        border-radius: 0 0 50px 50px;
+        transform: translateY(35px);
+    }    
+    65%,
+    100% {
+        border-radius: 0;
+        transform: translateY(0);
+    }
+}  */
+
+
+.square {
+    top: 550px;
+    width: 25px;
+    right: 350px; /* lest 625px*/
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    animation: squareAnim 2s infinite linear;
+}
+
+.square-shadow {
+    /* top: 700px; */
+    top: 647px;
+    width: 10px;
+    height: 3px;
+    right: 357.5px;/* lest 630px*/
+    /* background-color: #fff; */
+    border-radius: 50px;
+    animation: shadow-square-Anim 2s infinite linear;
+    /* box-shadow: 0px 10px 1px 0px rgba(0, 0, 0, 0.7); */
+}
+
+.rubber-shadow {
+    right: 310px;
+    width: 105px;
+    height: 3px;
+    /* background-color: burlywood; */
+    top: 647px;
+    animation: shadow-rubber-Anim 2s infinite linear;
+    box-shadow: 0px 50px 6px 0px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes shadow-rubber-Anim {
+    0%,
+    20% {
+        box-shadow: 0px 50px 15px 0px rgba(0, 0, 0, 0);
+    }
+    40% {
+        box-shadow: 0px 50px 6px 0px rgba(0, 0, 0, 0.7);
+    }    
+    100% {
+        box-shadow: 0px 50px 30px 0px rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes shadow-square-Anim {
+    0%,
+    20% {
+        box-shadow: 0px 50px 15px 0px rgba(0, 0, 0, 0);
+    }
+    30% {
+        box-shadow: 0px 50px 10px 0px rgba(0, 0, 0, 0.7);
+    }    
+    35% {
+        box-shadow: 0px 50px 9px 0px rgba(0, 0, 0, 0.7);
+    }    
+    40% {
+        box-shadow: 0px 50px 7px 0px rgba(0, 0, 0, 0.7);
+    }    
+    45% {
+        box-shadow: 0px 50px 5px 0px rgba(0, 0, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0px 50px 10px 0px rgba(0, 0, 0, 0.7);
+    }
+    60% {
+        box-shadow: 0px 50px 15px 0px rgba(0, 0, 0, 0);
+    }
+} 
+
+/* @keyframes squareAnim {
+    0% {
+        border-radius: 5px;
+        transform: translateY(0px);
+    }
+    20% {
+        border-radius: 5px;
+        transform: translateY(71px);
+    }
+
+    50%,
+    60% {
+        border-radius: 5px;
+        transform: translateY(106px);
+    }    
+    65% {
+        border-radius: 5px;
+        transform: translateY(71px);
+    }
+    100% {
+        border-radius: 5px;
+        transform: translateY(0);
+    }
+} */
+
+.left-stick {
+    left: 575px;
+    top: 600px;
+    box-shadow: inset 6px 2px 5px 0px rgb(215, 122, 33);
+    animation: left-stick-Anim 2s infinite linear;
+}
+.right-stick {
+    right: 300px;
+    top: 600px;
+    box-shadow: inset -6px 2px 5px 0px rgb(215, 122, 33);
+    animation: right-stick-Anim 2s infinite linear;
+}
+
+@keyframes left-stick-Anim {
+    0%,
+    20% {
+        transform: rotateZ(0);
+    }
+
+    40% {
+        transform: rotateZ(2deg);
+    }    
+
+    50% {
+        transform: rotateZ(1deg);
+    }
+    60% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+} 
+
+@keyframes right-stick-Anim {
+    0%,
+    20% {
+        transform: rotateZ(0);
+    }
+
+    40% {
+        transform: rotateZ(-2deg);
+    }    
+
+    50% {
+        transform: rotateZ(-1deg);
+    }
+    60% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+} 
+
+
+.test {
+    background-color: rgb(233, 154, 49);
+    width: 30px; /*115*/
+    height: 100px;/*100*/
+    left: 10px;
+    border-right: 5px solid coral;
+    box-shadow: 2px #ddd;
+    border-radius: 0px 50px 50px 0;
+    top: 50px;
+    transform-origin: bottom center;
+}
+.test-first {
+    box-shadow: inset 15px 12px 9px 0px rgb(215, 122, 33);
+}
+/* .test-second {
+    left: 150px;
+    box-shadow: inset -15px 12px 9px 0px rgb(215, 122, 33);
+} */
+
+
+
+
+
+
+@keyframes rubberAnim {
+    0%,
+    20% {
+        border-radius: 0;
+        transform: translateY(0);
+    }
+
+    40% {
+        border-radius: 0 0 50px 50px;
+        transform: translateY(35px);
+    }    
+
+    60% {
+        border-radius: 0;
+        transform: translateY(0);
+    }
+    100% {
+        border-radius: 0;
+        transform: translateY(0);
+    }
+} 
+
+
+
+@keyframes squareAnim {
+    0% {
+        border-radius: 5px;
+        transform: translateY(0px);
+    }
+
+    10% {
+        border-radius: 5px;
+        transform: translateY(10px);
+    }
+
+    20% {
+        border-radius: 5px;
+        transform: translateY(71px);
+    }
+
+    40% {
+        border-radius: 5px;
+        transform: translateY(106px);
+    }
+
+    60% {
+        border-radius: 5px;
+        transform: translateY(71px);
+    }
+    90% {
+        border-radius: 5px;
+        transform: translateY(10px);
+        transform: rotateZ(90deg);
+    }
+    100% {
+        border-radius: 5px;
+        transform: translateY(0);
+        transform: rotateZ(90deg);
+
+    }
+}
